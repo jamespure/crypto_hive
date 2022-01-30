@@ -1,13 +1,12 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
-const dotenv = require("dotenv");
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const app = express();
 
 app.use(bodyParser.json({ type: "application/*+json" }));
 app.use(cors());
-app.use(dotenv());
 
 app.get("/coins", async (req, res) => {
   const { data } = await axios.get("https://api.coinranking.com/v2/coins", {
