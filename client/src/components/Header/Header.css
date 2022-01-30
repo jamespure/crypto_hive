@@ -10,17 +10,30 @@ header {
   position: absolute;
   z-index: -1;
   height: 400px;
+  opacity: 0.8;
 }
 
 .input_group {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .input_group input {
-  width: 90%;
-  height: 35px;
+  width: 70%;
+  height: 40px;
   border: none;
+  padding: 0 20px;
+  outline: none;
   border-radius: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.input_group h1 {
+  font-size: 5rem;
+  color: #1b8f6e;
+  margin-top: 0;
 }
