@@ -8,7 +8,7 @@ function App() {
     <CoinsContextProvider>
       <SearchContextProvider>
         <Routes>
-          <Route path="/homepage" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </SearchContextProvider>
     </CoinsContextProvider>
