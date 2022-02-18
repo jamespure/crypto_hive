@@ -19,7 +19,7 @@ const CoinsContextProvider = ({ children }) => {
     };
 
     fetchCoins();
-  }, [coins]);
+  }, []);
 
   return (
     <CoinsContext.Provider value={coins}>{children}</CoinsContext.Provider>
