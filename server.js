@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
     });
     res.json(data);
   } catch (error) {
-    res.send(error.message).statusCode(503);
+    res.send(error.message);
   }
 });
 
