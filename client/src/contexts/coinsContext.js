@@ -13,7 +13,7 @@ const CoinsContextProvider = ({ children }) => {
   useEffect(() => {
     const fetchCoins = async () => {
       const { data } = await axios.get(
-        "https://crypto-hive.herokuapp.com/coins"
+        "https://crypto-hive.herokuapp.com/"
       );
       setCoins(data.data.coins);
     };
