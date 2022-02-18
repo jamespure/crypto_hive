@@ -9,13 +9,16 @@ app.use(bodyParser.json({ type: "application/*+json" }));
 app.use(cors());
 
 app.get("/", async (req, res) => {
-  const { data } = await axios.get("https://api.coinranking.com/v2/coins", {
-    headers: {
-      "x-access-token":
-        process.env.TOKEN,
-    },
-  });
-  res.json(data);
+  try {
+    const { data } = await axios.get("https://api.coinranking.com/v2/coins", {
+      headers: {
+        "x-access-token": process.env.TOKEN,
+      },
+    });
+    res.json(data);
+  } catch (error) {
+    res.send(error.message).statusCode(503);
+  }
 });
 
 app.listen(process.env.PORT, () => console.log(`Server running on port: ${process.env.PORT}`));
