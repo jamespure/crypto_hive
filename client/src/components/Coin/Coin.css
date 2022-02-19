@@ -1,0 +1,30 @@
+.coin__change {
+  display: none;
+}
+
+.tbody {
+  border-spacing: 0;
+}
+
+.tbody__row {
+}
+
+.tbody__cell {
+  display: flex;
+  align-items: center;
+  padding: 4px 9px;
+}
+
+.coin__icon {
+  margin: 0 15px;
+}
+
+.coin__name__group {
+  line-height: 0.9rem;
+  letter-spacing: 0.015rem;
+}
+
+.coin__name__group span {
+  color: #deb952;
+  font-weight: 400;
+}
