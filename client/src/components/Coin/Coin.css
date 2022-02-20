@@ -1,27 +1,50 @@
-.coin__change {
-  display: none;
-}
-
 .tbody {
   border-spacing: 0;
+  width: 100%;
 }
 
 .tbody__row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 16px 0;
 }
 
 .tbody__cell {
+}
+.cell__1-of-4 {
+  grid-column: 2 / span 5;
+}
+
+.cell__2-of-4 {
+  grid-column: 7 / span 3;
+  justify-self: center;
+}
+
+.profile {
   display: flex;
-  align-items: center;
-  padding: 4px 9px;
+}
+
+.coin__rank {
+  padding-right: 12px;
 }
 
 .coin__icon {
-  margin: 0 15px;
+  border: 1px solid #fff;
+
+  margin: 0 8px 0 0;
+  width: 28px;
+  height: 28px;
+}
+
+.coin__change {
+  grid-column: 11 / span 2;
 }
 
 .coin__name__group {
   line-height: 0.9rem;
   letter-spacing: 0.015rem;
+  margin: 0 5px 0 0;
 }
 
 .coin__name__group span {

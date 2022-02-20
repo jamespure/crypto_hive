@@ -6,11 +6,13 @@ const Header = () => {
   return (
     <header>
       <img src={header_img} alt="" className="header_bg" />
+
       <div
         className="input_group"
         onChange={(e) => setSearchTerm(e.target.value)}
       >
-        <h1>All Cryptocurrency</h1>
+        <h1 className="logo">Crypto Hive!</h1>
+        <p>Real time update for your favorite cryptocurrency.</p>
         <input type="text" placeholder="Search For Coin Here..." />
       </div>
     </header>

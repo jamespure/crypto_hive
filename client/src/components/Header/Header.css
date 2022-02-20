@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: center;
-  height: 400px;
+  height: 220px;
   align-items: center;
 }
 
@@ -9,8 +9,7 @@ header {
   width: 100%;
   position: absolute;
   z-index: -1;
-  height: 400px;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .input_group {
@@ -23,17 +22,20 @@ header {
 
 .input_group input {
   width: 70%;
-  height: 40px;
+  height: 30px;
   border: none;
   padding: 0 20px;
   outline: none;
   border-radius: 15px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
-.input_group h1 {
-  font-size: 2rem;
-  color: #1b8f6e;
-  margin-top: 0;
+.input_group p {
+  width: 23ch;
+}
+
+.logo {
+  align-self: baseline;
+  margin-left: 25px;
 }

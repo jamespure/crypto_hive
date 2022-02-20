@@ -6,14 +6,20 @@ const Coins = () => {
     <section className="coins">
       <table className="table">
         <thead className="thead">
-          <tr>
-            <td className="coins__crypto">{"cryptocurrency".toUpperCase()}</td>
-            <td className="coins__price">{"price".toUpperCase()}</td>
-            <td className="market">{"money market".toUpperCase()}</td>
-            <td className="change">{"24 h".toUpperCase()}</td>
+          <tr className="thead__row border">
+            <th className="thead__cell coins__crypto">
+              {"cryptocurrency".toUpperCase()}
+            </th>
+            <th className="thead__cell coins__price">
+              {"price".toUpperCase()}
+            </th>
+            <th className="thead__cell market">
+              {"money market".toUpperCase()}
+            </th>
+            <th className="change thead__cell ">{"24 h".toUpperCase()}</th>
           </tr>
         </thead>
-        <div className="border"></div>
+
         <Coin />
       </table>
     </section>

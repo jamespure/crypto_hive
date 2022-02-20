@@ -7,7 +7,7 @@ const Coin = () => {
   const { searchTerm } = useSearch();
 
   return (
-    <tbody className="tbody">
+    <tbody className="table tbody">
       {coins
         .filter((coin) => {
           if (searchTerm === "") {
@@ -19,23 +19,33 @@ const Coin = () => {
           }
         })
         .map((coin) => (
-          <tr className="tbody__row" key={coin.uuid}>
-            <td className="tbody__cell">
-              {coin.rank}
-              <span className="coin__icon">
-                <img src={coin.iconUrl} alt="" style={{ width: "32px" }} />
-              </span>
-              <div className="coin__name__group">
-                {coin.name}
-                <br />
-                <span>{coin.symbol}</span>
+          <tr className="tbody__row border" key={coin.uuid}>
+            <td className="tbody__cell cell__1-of-4">
+              <div className="profile">
+                <span className="coin__rank">{coin.rank}</span>
+                <span className="coin__icon">
+                  <img
+                    src={coin.iconUrl}
+                    alt=""
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                </span>
+                <div className="coin__name__group">
+                  {coin.name}
+                  <br />
+                  <span>{coin.symbol}</span>
+                </div>
               </div>
             </td>
-            <td className="">$ {Math.round(coin.price * 100) / 100}</td>
-            <td className="table table__cell table__cell__2-of-4 market">
-              $ {coin.marketCap}
+            <td className="tbody__cell cell__2-of-4">
+              <div className="coin__price">
+                $ {Math.round(coin.price * 100) / 100}
+              </div>
             </td>
-            <td className="coin__change">{coin.change}</td>
+            <td className="tbody__cell market">$ {coin.marketCap}</td>
+            <td className="tbody__cell coin__change">
+              <div className="">{coin.change} %</div>
+            </td>
           </tr>
         ))}
     </tbody>
