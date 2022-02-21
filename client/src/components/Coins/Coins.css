@@ -44,7 +44,7 @@
   grid-column: 11 / span 2;
   justify-self: end;
 }
-@media (max-width: 412px) {
+@media (max-width: 575px) {
   .market {
     display: none;
   }
