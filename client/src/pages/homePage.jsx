@@ -1,13 +1,14 @@
-import Coins from "../components/Coins/Coins"
-import Header from "../components/Header/Header"
+import Coins from "../components/Coins/Coins";
+import Header from "../components/Header/Header";
 
 const homePage = () => {
-    return (
-        <div>
-            <Header/>
-            <Coins/>
-        </div>
-    )
-}
+  return (
+    <div>
+      <title>Home</title>
+      <Header />
+      <Coins />
+    </div>
+  );
+};
 
-export default homePage
+export default homePage;
