@@ -1,50 +1,16 @@
 .coins {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 36px;
+  margin: 25px auto;
+  width: 90%;
 }
-
-.table {
-  display: block;
-  width: 100%;
-  border-spacing: 0;
+.border-color {
+  border-bottom: 1px solid #13dba4;
 }
 
 .thead {
   color: #1b8f6e;
-  display: flex;
-  justify-content: center;
 }
 
-.border {
-  width: 100%;
-  border-bottom: 1px solid #13dba4;
-}
-
-.thead__row {
-  padding: 0 16px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.thead__cell {
-  padding: 6px 4px 7px;
-}
-
-.coins__crypto {
-  grid-column: 1 / span 5;
-}
-
-.coins__price {
-  grid-column: 8;
-  justify-self: end;
-}
-
-.change {
-  grid-column: 11 / span 2;
-  justify-self: end;
-}
-@media (max-width: 575px) {
+@media (max-width: 800px) {
   .market {
     display: none;
   }

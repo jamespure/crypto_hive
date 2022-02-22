@@ -1,53 +1,21 @@
-.tbody {
-  border-spacing: 0;
-  width: 100%;
-}
-
-.tbody__row {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(12, 1fr);
-  padding: 16px 0;
-}
-
-.tbody__cell {
-}
-.cell__1-of-4 {
-  grid-column: 2 / span 5;
-}
-
-.cell__2-of-4 {
-  grid-column: 7 / span 3;
-  justify-self: center;
-}
-
-.profile {
-  display: flex;
+.border-color {
+  border-bottom: 1px solid #13dba4;
 }
 
 .coin__rank {
-  padding-right: 12px;
+  padding-right: 15px;
 }
-
 .coin__icon {
-  border: 1px solid #fff;
-
-  margin: 0 8px 0 0;
-  width: 28px;
-  height: 28px;
+  height: 32px;
+  width: 32px;
+  margin: -2px 10px 0 0;
 }
 
-.coin__change {
-  grid-column: 11 / span 2;
+.coin {
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
-.coin__name__group {
-  line-height: 0.9rem;
-  letter-spacing: 0.015rem;
-  margin: 0 5px 0 0;
-}
-
-.coin__name__group span {
+.coin__symbol {
   color: #deb952;
-  font-weight: 400;
 }

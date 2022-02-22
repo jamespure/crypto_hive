@@ -7,7 +7,7 @@ const Coin = () => {
   const { searchTerm } = useSearch();
 
   return (
-    <tbody className="table tbody">
+    <tbody>
       {coins
         .filter((coin) => {
           if (searchTerm === "") {
@@ -19,9 +19,9 @@ const Coin = () => {
           }
         })
         .map((coin) => (
-          <tr className="tbody__row border" key={coin.uuid}>
-            <td className="tbody__cell cell__1-of-4">
-              <div className="profile">
+          <tr className="border-color align-middle" key={coin.uuid}>
+            <td className="">
+              <div className="profile d-flex align-items-center">
                 <span className="coin__rank">{coin.rank}</span>
                 <span className="coin__icon">
                   <img
@@ -30,14 +30,14 @@ const Coin = () => {
                     style={{ width: "24px", height: "24px" }}
                   />
                 </span>
-                <div className="coin__name__group">
-                  {coin.name}
+                <div className="coin">
+                  <span className="coin__name">{coin.name}</span>
                   <br />
-                  <span>{coin.symbol}</span>
+                  <span className='coin__symbol'>{coin.symbol}</span>
                 </div>
               </div>
             </td>
-            <td className="tbody__cell cell__2-of-4">
+            <td className="">
               <div className="coin__price">
                 $ {Math.round(coin.price * 100) / 100}
               </div>

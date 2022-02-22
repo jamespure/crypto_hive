@@ -1,12 +1,13 @@
 import Coin from "../Coin/Coin";
 import "./Coins.css";
+import { Table } from "react-bootstrap";
 
 const Coins = () => {
   return (
     <section className="coins">
-      <table className="table">
-        <thead className="thead">
-          <tr className="thead__row border">
+      <Table borderless responsive="sm">
+        <thead className="thead border-color">
+          <tr>
             <th className="thead__cell coins__crypto">
               {"cryptocurrency".toUpperCase()}
             </th>
@@ -21,7 +22,7 @@ const Coins = () => {
         </thead>
 
         <Coin />
-      </table>
+      </Table>
     </section>
   );
 };
