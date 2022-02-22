@@ -1,11 +1,4 @@
 header {
-  display: flex;
-  justify-content: center;
-  height: 220px;
-  align-items: center;
-}
-
-header {
   position: relative;
   overflow: hidden;
   width: 100%;
