@@ -1,8 +1,10 @@
-
+import Coin from "../components/Coin/Coin";
 const coinPage = () => {
   return (
-    <div>coinPage</div>
-  )
-}
+    <>
+      <Coin />
+    </>
+  );
+};
 
-export default coinPage
+export default coinPage;

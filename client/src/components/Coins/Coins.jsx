@@ -30,6 +30,7 @@ const useStyles = makeStyles(() => ({
     },
   },
 }));
+
 const theme = createTheme({
   root: {},
   overrides: {
@@ -64,18 +65,6 @@ const Coins = (props) => {
         coin.name.toLowerCase().includes(search) ||
         coin.symbol.toLowerCase().includes(search)
     );
-  };
-
-  const handleFormatting = (value) => {
-    if (value > 999 && value < 1000000) {
-      return (value / 1000).toFixed(1) + "K";
-    } else if (value > 1000000) {
-      return (value / 1000000).toFixed(1) + "M";
-    } else if (value > 1000000000) {
-      return (value / 1000000000).toFixed(1) + "B";
-    } else if (value < 999) {
-      return value;
-    }
   };
 
   return (
@@ -206,3 +195,15 @@ const Coins = (props) => {
 };
 
 export default withStyles(useStyles)(Coins);
+
+export const handleFormatting = (value) => {
+  if (value > 999 && value < 1000000) {
+    return (value / 1000).toFixed(1) + "K";
+  } else if (value > 1000000) {
+    return (value / 1000000).toFixed(1) + "M";
+  } else if (value > 1000000000) {
+    return (value / 1000000000).toFixed(1) + "B";
+  } else if (value < 999) {
+    return value;
+  }
+};
