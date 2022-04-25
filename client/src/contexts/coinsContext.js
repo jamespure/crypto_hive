@@ -1,23 +1,19 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
+import { allCoins } from "../config/api";
 
 const CoinsContext = createContext([]);
 
-export const useCoins = () => {
-  return useContext(CoinsContext);
-};
 
 const CoinsContextProvider = ({ children }) => {
   const [coins, setCoins] = useState([]);
 
+   const fetchCoins = async () => {
+     const { data } = await axios.get(allCoins);
+     setCoins(data);
+   };
+   
   useEffect(() => {
-    const fetchCoins = async () => {
-      const { data } = await axios.get(
-        "https://crypto-hive.herokuapp.com/"
-      );
-      setCoins(data.data.coins);
-    };
-
     fetchCoins();
   }, []);
 
@@ -27,3 +23,7 @@ const CoinsContextProvider = ({ children }) => {
 };
 
 export default CoinsContextProvider;
+
+export const useCoins = () => {
+  return useContext(CoinsContext);
+};

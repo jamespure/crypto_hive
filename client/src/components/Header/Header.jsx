@@ -1,21 +1,52 @@
-import header_img from "../../assets/header_img.jpg";
-import { useSearch } from "../../contexts/searchContext";
-import "./Header.css";
-const Header = () => {
-  const { setSearchTerm } = useSearch();
-  return (
-    <header>
-      <img src={header_img} alt="" className="header_bg" />
+import {
+  ThemeProvider,
+  createTheme,
+  makeStyles,
+  AppBar,
+  Container,
+  Typography,
+} from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.svg";
 
-      <div
-        className="input_group"
-        onChange={(e) => setSearchTerm(e.target.value)}
-      >
-        <h1 className="logo">Crypto Hive!</h1>
-        <p>Real time update for your favorite cryptocurrency.</p>
-        <input type="text" placeholder="Search For Coin Here..." />
-      </div>
-    </header>
+const theme = createTheme({
+  palette: {
+    primary: { main: "#deb952" },
+  },
+});
+
+const useStyles = makeStyles(() => ({
+  header: {
+    height: "65px",
+    justifyContent: "center",
+  },
+
+  logo: {
+    fontFamily: "Mukta, sans-serif",
+    fontWeight: 700,
+    color: "#fff",
+    cursor: "pointer",
+  },
+}));
+
+const Header = () => {
+  let navigate = useNavigate();
+  const classes = useStyles();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <AppBar position="static" color="transparent" className={classes.header}>
+        <Container>
+          <Typography
+            variant="h4"
+            className={classes.logo}
+            onClick={() => navigate("/")}
+          >
+            Crypto Hive <img src={logo} alt="logo" />
+          </Typography>
+        </Container>
+      </AppBar>
+    </ThemeProvider>
   );
 };
 

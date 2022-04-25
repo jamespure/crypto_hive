@@ -1,13 +1,12 @@
+import Banner from "../components/Banner/Banner";
 import Coins from "../components/Coins/Coins";
-import Header from "../components/Header/Header";
 
 const homePage = () => {
   return (
-    <div>
-      <title>Home</title>
-      <Header />
+    <>
+      <Banner />
       <Coins />
-    </div>
+    </>
   );
 };
 

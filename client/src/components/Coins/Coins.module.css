@@ -1,0 +1,8 @@
+@media screen and (max-width: 420px) {
+  .market th:last-child {
+    display: none;
+  }
+  .market_price td:last-child {
+    display: none;
+  }
+}
