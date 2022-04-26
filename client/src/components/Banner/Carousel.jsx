@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, makeStyles } from "@material-ui/core";
 import AliceCarousel from "react-alice-carousel";

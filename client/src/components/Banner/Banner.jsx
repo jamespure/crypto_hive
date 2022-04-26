@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, makeStyles, Typography } from "@material-ui/core";
 import classes from "./banner.module.css";
 import Carousel from "./Carousel";

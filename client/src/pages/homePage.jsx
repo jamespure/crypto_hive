@@ -1,3 +1,4 @@
+import React from "react";
 import Banner from "../components/Banner/Banner";
 import Coins from "../components/Coins/Coins";
 

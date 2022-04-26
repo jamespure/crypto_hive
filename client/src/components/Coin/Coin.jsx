@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Coin.css";
 import { coinData } from "../../config/api";
@@ -9,10 +9,10 @@ import {
   ThemeProvider,
   createTheme,
 } from "@material-ui/core";
-import ReactHtmlParser from "react-html-parser";
 import Loading from "../Loading/Loading";
 import { handleFormatting } from "../Coins/Coins";
 import CoinChart from "../CoinChart/CoinChart";
+import HTMLReactParser from "react-html-parser";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aside: {
     width: "30%",
+    padding: 20,
     borderRight: "2px solid gray",
     display: "flex",
     flexDirection: "column",
@@ -97,8 +98,12 @@ const Coin = () => {
             <Typography variant="h3" className={styles.heading}>
               {coin?.name}
             </Typography>
-            <Typography color="secondary" variant="subtitle1" className={styles.description}>
-              {ReactHtmlParser(coin?.description.en.split(". ")[0])}.
+            <Typography
+              color="secondary"
+              variant="subtitle1"
+              className={styles.description}
+            >
+              {HTMLReactParser(coin?.description.en.split(". ")[0])}.
             </Typography>
             <div className={styles.marketData}>
               <span style={{ display: "flex", gap: 10 }}>

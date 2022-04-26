@@ -1,3 +1,4 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CoinsContextProvider from "../contexts/coinsContext";
 import SearchContextProvider from "../contexts/searchContext";
