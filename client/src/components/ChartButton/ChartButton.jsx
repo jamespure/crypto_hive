@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import React from "react";
 
 const ChartButton = ({ children, onClick, selected }) => {
-  const useStyles = makeStyles({
+  const useStyles = makeStyles((theme) => ({
     chartButton: {
       border: "1px solid #dba279",
       borderRadius: 5,
@@ -18,8 +18,18 @@ const ChartButton = ({ children, onClick, selected }) => {
         color: "#111826",
       },
       textAlign: "center",
+      [theme.breakpoints.down("xs")]: {
+        "&:nth-last-child(1)": {
+          display: "none",
+        },
+        [theme.breakpoints.down("xs")]: {
+          "&:nth-last-child(2)": {
+            display: "none",
+          },
+        },
+      },
     },
-  });
+  }));
   const styles = useStyles();
 
   return (
