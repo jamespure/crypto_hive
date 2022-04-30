@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Route, Routes, useLocation, useParams } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import CoinsContextProvider from "../contexts/coinsContext";
 import SearchContextProvider from "../contexts/searchContext";
 import TrendingContextProvider from "../contexts/trendingContextProvider";
@@ -25,16 +25,16 @@ const theme = createTheme({
 });
 
 function App() {
-  const [title, setTitle] = useState('')
-  const path = useLocation()
-  const pageTitle = path.pathname.toString().split("/coin/")[1];
+  const [title, setTitle] = useState('');
+  let path = useLocation().pathname;
+  let pageTitle = path.toString().split("/coin/")[1];
 
   const handleTitle = useCallback(() => { 
     if (pageTitle == null) {
-      return setTitle("Home".toUpperCase());
+      return setTitle("Home");
       
     } else {
-      return setTitle(pageTitle.toUpperCase());
+      return setTitle(pageTitle);
     }
   }, [pageTitle, setTitle])
 
@@ -42,10 +42,9 @@ function App() {
     handleTitle();
   },[handleTitle])
   
-  console.log(title)
   
   
-  useTitle(title);
+  useTitle(title.toUpperCase());
   return (
     <ThemeProvider theme={theme}>
       <CoinsContextProvider>
