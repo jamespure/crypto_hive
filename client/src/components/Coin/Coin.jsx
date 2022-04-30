@@ -13,6 +13,7 @@ import Loading from "../Loading/Loading";
 import { handleFormatting } from "../Coins/Coins";
 import CoinChart from "../CoinChart/CoinChart";
 import HTMLReactParser from "react-html-parser";
+import Helmet from "react-helmet";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -93,6 +94,13 @@ const Coin = () => {
         <Loading />
       ) : (
         <article className={styles.container}>
+          <Helmet>
+            <title>{coin?.name}</title>
+            <meta
+              name="description"
+              content={`Info About Your Favorite Cryptocurrencies`}
+            />
+          </Helmet>
           <aside className={styles.aside}>
             <img src={coin?.image.large} alt={id} />
             <Typography variant="h3" className={styles.heading}>
