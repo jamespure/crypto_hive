@@ -1,5 +1,4 @@
 # crypto_hive
-The application currently allows the user to search for their favorite crypto currency. 
-While able to view the description, price, market cap in 24 hours, and chart data in 24 hours, 30 days, 
-3 months, 6 months, and 1 year. Application is very responsive, on mobile screen to save space only 24 hours, 30 days, 
-and 3 months is visible. I displayed proficiency in React.js and Material UI to develop the application functionality.
+Crypto Hive allows investors to discover their favorite cryptocurrency. Users can search and retrieve relevant cryptocurrency info like description, price, market cap and chart data based on chosen time intervals (i.e. 24 hrs, 30 days, 6 months). In building this application, I displayed proficiency in JavaScript, React and Material UI. 
+## Demo
+Take a look at the [Demo Here](https://elegant-galileo-fd1919.netlify.app/)
