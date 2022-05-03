@@ -14,8 +14,8 @@ import {
   withStyles,
 } from "@material-ui/core";
 import React, { useState } from "react";
-import { useSearch } from "../../contexts/searchContext";
-import { useCoins } from "../../contexts/coinsContext";
+import { useSearch } from "../../contexts/searchContextProvider";
+import { useCoins } from "../../contexts/coinsContextProvider";
 import Loading from "../Loading/Loading";
 import { useNavigate } from "react-router-dom";
 import { Pagination } from "@material-ui/lab";

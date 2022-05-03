@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes,  } from "react-router-dom";
-import CoinsContextProvider from "../contexts/coinsContext";
-import SearchContextProvider from "../contexts/searchContext";
+import CoinsContextProvider from "../contexts/coinsContextProvider";
+import SearchContextProvider from "../contexts/searchContextProvider";
 import TrendingContextProvider from "../contexts/trendingContextProvider";
 import Home from "../pages/homePage";
 import Header from "./Header/Header";

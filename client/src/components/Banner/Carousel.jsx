@@ -1,34 +1,12 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
-import { Card, CardContent, makeStyles } from "@material-ui/core";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";
 import { useTrending } from "../../contexts/trendingContextProvider";
+import classes from './Carousel.module.css'
 
-const useStyles = makeStyles(() => ({
-  carousel: {
-    height: "50%",
-    display: "flex",
-    alignItems: "center",
-    color: "white",
-  },
-  item: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    fontFamily: "Mukta, sans-serif",
-    color: "white",
-  },
-  itemInfo: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-}));
 
 const Carousel = () => {
-  const classes = useStyles();
   const trendingCoin = useTrending();
 
   const items = trendingCoin.map((coin) => {

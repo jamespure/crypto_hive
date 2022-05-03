@@ -1,0 +1,27 @@
+.banner {
+  background-image: url("../../assets/banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 80px;
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 40%;
+  font-family: "Mukta", sans-serif;
+}
+
+.bannerContent {
+  height: 400px;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
